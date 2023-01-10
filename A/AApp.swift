@@ -11,7 +11,31 @@ import SwiftUI
 struct AApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    VStack {
+                        Divider()
+                        Text("Badge")
+                        Divider()
+                        Badge()
+                        Spacer()
+                        Divider()
+                        Text("SignalStrength")
+                        Divider()
+                        SignalStrength()
+                    }
+                    VStack {
+                        Divider()
+                        Text("TabBar")
+                        Divider()
+                        TabBarView()
+                        Divider()
+                        Text("AligningTwoColumns")
+                        Divider()
+                        AligningTwoColumns()
+                    }
+                }
+            }
         }
     }
 }
